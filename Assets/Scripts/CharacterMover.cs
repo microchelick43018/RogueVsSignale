@@ -12,7 +12,7 @@ public class CharacterMover : MonoBehaviour
 
     private Animator _animator;
 
-    private enum Sides//asd
+    private enum Sides
     {
         left = 0,
         right = 1
