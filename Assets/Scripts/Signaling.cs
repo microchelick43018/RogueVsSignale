@@ -20,6 +20,7 @@ public class Signaling : MonoBehaviour
         add => _outsiderCameOut.AddListener(value);
         remove => _outsiderCameOut.RemoveListener(value);
     }
+
     public event UnityAction OutSiderEntered
     {
         add => _outsiderEntered.AddListener(value);

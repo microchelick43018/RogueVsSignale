@@ -4,6 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(PlayerAnimController))]
 
 public class CharacterMover : MonoBehaviour
 {
@@ -28,7 +29,8 @@ public class CharacterMover : MonoBehaviour
         float axisValue = Input.GetAxis("Horizontal");
         TurnToCorrectSide(axisValue);
         transform.Translate(transform.right * axisValue * Time.deltaTime * _speed);
-        _animator.SetFloat("Speed", _speed * Mathf.Abs(axisValue));
+        _animator.SetFloat(PlayerAnimController.Params.Speed, _speed * Mathf.Abs(axisValue));
+        
     }
 
     private void TurnToCorrectSide(float axisValue)
